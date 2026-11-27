@@ -50,7 +50,8 @@ section{margin-top:72px}
 .nfc-card .mt{font-size:9px;letter-spacing:.24em;color:var(--muted);margin-top:4px}
 .nfc-card .row{display:flex;justify-content:space-between;align-items:flex-end}
 .wave{width:34px;height:34px;color:var(--accent)}
-.qr{width:46px;height:46px;border-radius:4px;background:conic-gradient(from 90deg at 30% 30%,#F2F2F3 25%,transparent 0) 0 0/11px 11px,#1a1b1e;border:3px solid #F2F2F3;opacity:.85}
+.arrow{width:40px;height:40px;color:var(--fg)}
+.grid2.two{grid-template-columns:repeat(2,1fr)}
 .ring{position:absolute;width:120px;height:120px;border-radius:50%;border:1px solid var(--accent);opacity:0;right:6%;top:4%;animation:pulse 2.6s ease-out infinite}
 .ring.r2{animation-delay:1.3s}
 @keyframes pulse{0%{transform:scale(.4);opacity:.7}100%{transform:scale(1.4);opacity:0}}
@@ -127,7 +128,7 @@ footer{margin-top:40px;font-size:12px;color:var(--muted);text-align:center}
 @media (max-width:860px){
 .hero{grid-template-columns:1fr}
 .stage{min-height:240px;order:-1}
-.steps,.grid2,.compare,.tiers,.prices,.extras{grid-template-columns:1fr}
+.steps,.grid2,.grid2.two,.compare,.tiers,.prices,.extras{grid-template-columns:1fr}
 .pack{grid-template-columns:1fr 1fr}
 section{margin-top:56px}
 }
@@ -163,7 +164,7 @@ section{margin-top:56px}
 <div><div class="nm">SULTAN</div><div class="mt">NEXT GEN MINDSET</div></div>
 <div class="row">
 <svg class="wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 8.5a6 6 0 0 1 0 7"/><path d="M9.5 6a10 10 0 0 1 0 12"/><path d="M13 3.5a14 14 0 0 1 0 17"/></svg>
-<div class="qr"></div>
+<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
 </div>
 </div>
 </div>
@@ -183,11 +184,10 @@ section{margin-top:56px}
 <section>
 <div class="eyebrow">Что нужно телефону</div>
 <h2>Работает почти с любым современным смартфоном</h2>
-<p class="lead">Приложения не нужны. Если у человека нет NFC, на карте есть QR-код.</p>
-<div class="grid2">
+<p class="lead">Приложения не нужны. NFC сейчас есть почти во всех смартфонах.</p>
+<div class="grid2 two">
 <div class="box"><div class="k">iPhone</div><h3>XR и новее</h3><ul><li>Ничего включать не надо</li><li>Экран должен быть разблокирован</li><li>Приложить карту к верхнему краю телефона</li></ul></div>
 <div class="box"><div class="k">Android</div><h3>С модулем NFC</h3><ul><li>NFC включён в настройках (обычно уже включён, если человек платит телефоном)</li><li>Приложить к середине задней крышки</li></ul></div>
-<div class="box"><div class="k">Без NFC</div><h3>QR-код на карте</h3><ul><li>Навести камеру на QR</li><li>Открывается та же страница</li></ul></div>
 </div>
 </section>
 
@@ -237,7 +237,7 @@ section{margin-top:56px}
 <h2>Вы получаете не просто карту</h2>
 <p class="lead">Это несложно в использовании, но за этим стоит несколько работ. Их делаю я, от вас нужны только контакты.</p>
 <div class="pack">
-<div class="box"><h3>Карта</h3><p>Печать на 3D-принтере, чип NFC и QR-код.</p></div>
+<div class="box"><h3>Карта</h3><p>Строгая чёрная карта, печать на 3D-принтере, чип NFC внутри.</p></div>
 <div class="box"><h3>Страница</h3><p>Ваша страница Taplink: кто вы, услуги, контакты, соцсети.</p></div>
 <div class="box"><h3>Настройка</h3><p>Записываю ссылку на чип, проверяю на iPhone и Android.</p></div>
 <div class="box"><h3>Год обслуживания</h3><p>Год ручаюсь, что карта и страница работают без сбоев. Правки страницы по запросу за небольшую доплату.</p></div>
@@ -248,7 +248,7 @@ section{margin-top:56px}
 <section id="prices">
 <div class="eyebrow">Цены</div>
 <h2>Три варианта, всё под ключ</h2>
-<p class="lead">В каждый пакет входят карта с чипом NFC и QR-кодом, настройка, проверка на iPhone и Android и год гарантии работы.</p>
+<p class="lead">В каждый пакет входят карта с чипом NFC, настройка, проверка на iPhone и Android и год гарантии работы.</p>
 <div class="prices">
 <div class="box price"><div class="k">Стандарт</div><div class="amt">990 <small>сом</small></div><h3>Фирменная карта SULTAN</h3><ul><li>Единый проверенный дизайн карты</li><li>Страница под ключ, до 6 кнопок и ссылок</li><li>Одна правка на этапе макета</li><li>Фирменная упаковка</li></ul><p class="note">Готово до 48 часов</p></div>
 <div class="box price vip"><div class="k">VIP</div><div class="amt"><small>от</small> 2900 <small>сом</small></div><h3>Карта и страница с нуля под вас</h3><ul><li>Форма карты по вашему логотипу, ваши цвета</li><li>Индивидуальная страница с собственным дизайном</li><li>Согласование макета до результата</li><li>Фирменная упаковка</li></ul><p class="note">Срок обсуждаем под задачу</p></div>
@@ -265,9 +265,9 @@ section{margin-top:56px}
 <div class="eyebrow">Вопросы</div>
 <h2>Частые вопросы</h2>
 <div class="faq" style="margin-top:20px">
-<details><summary>Нужно ли собеседнику скачивать приложение?</summary><p>Нет. iPhone и Android с NFC открывают ссылку сами. Если NFC нет, человек сканирует QR-код обычной камерой.</p></details>
-<details><summary>Это безопасно?</summary><p>Да. Чип хранит только ссылку на вашу страницу, как QR-код. Он не может ничего прочитать или записать на чужой телефон и не имеет отношения к банковским картам.</p></details>
-<details><summary>Работает через чехол?</summary><p>Через обычный тонкий чехол обычно работает. Через толстый или металлический чехол может не сработать, тогда помогает QR-код.</p></details>
+<details><summary>Нужно ли собеседнику скачивать приложение?</summary><p>Нет. iPhone и Android с NFC открывают ссылку сами, без приложений.</p></details>
+<details><summary>Это безопасно?</summary><p>Да. Чип хранит только ссылку на вашу страницу. Он не может ничего прочитать или записать на чужой телефон и не имеет отношения к банковским картам.</p></details>
+<details><summary>Работает через чехол?</summary><p>Через обычный тонкий чехол обычно работает. Через толстый или металлический чехол может не сработать: тогда карту прикладывают к телефону без чехла.</p></details>
 <details><summary>Сколько служит карта?</summary><p>Первый год я ручаюсь, что карта и страница работают без сбоев. У чипа нет батарейки, ему нечему разряжаться, поэтому карта может служить и дольше, но после года это уже без гарантии.</p></details>
 <details><summary>Можно поменять данные после покупки?</summary><p>Да. Номер, услуги и ссылки меняются на вашей странице, карту перепечатывать не нужно. Мелкая правка стоит 150 сом.</p></details>
 <details><summary>Сколько делается?</summary><p>До 48 часов с момента, как вы прислали контакты и согласовали страницу.</p></details>
