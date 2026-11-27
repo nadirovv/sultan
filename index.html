@@ -3,31 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Концепты Taplink-страниц от SULTAN: цветы, консалтинг, онлайн-курс, кофейня, личные страницы.">
+<meta name="description" content="12 концептов Taplink-страниц от SULTAN: магазины и еда, услуги, эксперты, личные страницы.">
 <meta property="og:title" content="Примеры Taplink-страниц · SULTAN">
 <title>Примеры работ · SULTAN</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&family=Unbounded:wght@500;700&family=Manrope:wght@400;600;700&display=swap">
 <style>
-/* Layout: тёмная витрина SULTAN; каждый кейс — мокап телефона + паспорт кейса, на телефоне в одну колонку */
 :root{
-  --bg:#0B0B0C; --card:#151517; --line:#26272A; --fg:#F2F2F3; --muted:#8E9097; --accent:#9DB4C8;
-  --f-brand:"Montserrat",system-ui,sans-serif;
-  color-scheme:dark;
+--bg:#0B0B0C;--card:#151517;--line:#26272A;--fg:#F2F2F3;--muted:#8E9097;--accent:#9DB4C8;
+--f-brand:"Montserrat",system-ui,sans-serif;
+color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--f-brand);font-size:15px;line-height:1.55;margin:0}
 .wrap{max-width:1080px;margin:0 auto;padding-block:48px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-header{display:grid;gap:12px;margin-bottom:40px;max-width:640px}
+header{display:grid;gap:12px;margin-bottom:28px;max-width:640px}
 .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600}
 h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:0;font-weight:700;text-wrap:balance}
 header p{margin:0;color:var(--muted)}
 .note{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--card)}
+.filters{position:sticky;top:0;z-index:5;background:var(--bg);display:grid;gap:10px;padding-block:14px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.frow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.flabel{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);width:64px;flex:none}
+.fbtn{font:inherit;font-size:13px;font-weight:500;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:99px;padding:7px 14px;cursor:pointer}
+.fbtn:hover{border-color:var(--accent)}
+.fbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#0B0B0C;font-weight:600}
+.fbtn:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.count{font-size:13px;color:var(--muted)}
 .list{display:grid;gap:28px}
 .case{display:grid;grid-template-columns:280px 1fr;gap:32px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;align-items:start}
 .info{min-width:0;display:grid;gap:14px}
-.tag{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.tag{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 .tag b{color:var(--accent);font-weight:600}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills span{font-size:11px;border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--muted)}
 .info h2{margin:0;font-size:24px;line-height:1.2}
 .info p{margin:0;color:var(--muted);max-width:60ch}
 .info h3{margin:6px 0 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);font-weight:600}
@@ -37,7 +46,6 @@ header p{margin:0;color:var(--muted)}
 .sw{display:flex;flex-wrap:wrap;gap:10px}
 .sw span{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
 .sw i{width:22px;height:22px;border-radius:6px;border:1px solid var(--line);display:block}
-/* phone */
 .phone{width:280px;max-width:100%;aspect-ratio:9/18.5;border-radius:36px;border:8px solid #1f2023;background:#000;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45)}
 .screen{height:100%;overflow:hidden;padding:26px 16px 16px;display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center}
 .av{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:22px;flex:none}
@@ -47,97 +55,144 @@ header p{margin:0;color:var(--muted)}
 .btn{width:100%;padding:10px 12px;font-size:12.5px;font-weight:600;border-radius:12px;line-height:1.2}
 .icons{display:flex;gap:8px;margin-top:auto}
 .icons span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:700}
+.empty{color:var(--muted);text-align:center;padding:40px 0}
+.empty button{font:inherit;color:var(--accent);background:none;border:0;text-decoration:underline;cursor:pointer}
 .cta{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
 .cta h2{margin:0;font-size:22px}
 .cta p{margin:4px 0 0;color:var(--muted)}
 .cta a{background:var(--accent);color:#0B0B0C;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px}
 .cta a:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
-@media (max-width:720px){.case{grid-template-columns:1fr;padding:20px;gap:24px}.phone{margin:0 auto}}
+@media (max-width:720px){.case{grid-template-columns:1fr;padding:20px;gap:24px}.phone{margin:0 auto}.flabel{width:100%}.filters{position:static}}
 </style>
-
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="eyebrow">SULTAN · Taplink под ключ</div>
-    <h1>Примеры Taplink-страниц</h1>
-    <p>Шесть концептов для разных ниш: бизнес, эксперты, личные страницы. Так может выглядеть и ваша.</p>
-    <div class="note">Это демонстрационные концепты, названия и тексты придуманы для примера.</div>
-  </header>
-  <div class="list" id="list"></div>
-  <section class="cta">
-    <div>
-      <h2>Хотите такую страницу?</h2>
-      <p>Напишите нишу и что продаёте, предложу структуру.</p>
-    </div>
-    <a href="https://wa.me/996707295898">Написать в WhatsApp</a>
-  </section>
+<header>
+<div class="eyebrow">SULTAN · Taplink под ключ</div>
+<h1>Примеры Taplink-страниц</h1>
+<p>Двенадцать концептов для разных ниш. Выберите сферу или стиль и найдите похожее на ваш бизнес.</p>
+<div class="note">Это демонстрационные концепты, названия и тексты придуманы для примера.</div>
+</header>
+<nav class="filters" aria-label="Фильтры">
+<div class="frow" id="f-sphere"><span class="flabel">Сфера</span></div>
+<div class="frow" id="f-style"><span class="flabel">Стиль</span></div>
+<div class="count" id="count"></div>
+</nav>
+<div class="list" id="list"></div>
+<section class="cta">
+<div>
+<h2>Хотите такую страницу?</h2>
+<p>Напишите нишу и что продаёте, предложу структуру.</p>
 </div>
-
+<a href="https://wa.me/996707295898" target="_blank" rel="noopener">Написать в WhatsApp</a>
+</section>
+</div>
 <script>
+const SPHERES=["Магазины и еда","Услуги","Эксперты и обучение","Личные страницы"];
+const STYLES=["Минимализм","Мягкий","Яркий","Тёмный"];
 const cases=[
- {niche:"Цветочная мастерская",name:"Пионовый сад",init:"ПС",
-  task:"Принять заказ букета за пару касаний: каталог, WhatsApp, условия доставки.",
-  sub:"Букеты и композиции с доставкой по Бишкеку за 2 часа",chip:"Ежедневно 9:00–21:00",
-  btns:["Каталог букетов","Заказать в WhatsApp","Доставка и оплата","Свадебная флористика","Мы на 2ГИС"],icons:["IG","WA","TG"],
-  pal:{bg:"#F6ECEE",fg:"#2E2A2B",ac:"#C46A78",bt:"#FFFFFF",leaf:"#7C8F6A"},font:"'Cormorant Garamond',Georgia,serif",nameSize:22},
- {niche:"Консалтинг для малого бизнеса",name:"Ось · консалтинг",init:"О",
-  task:"Вызвать доверие и довести до записи на бесплатную диагностику.",
-  sub:"Настраиваем продажи и учёт в малом бизнесе. Без воды, с цифрами.",chip:"Диагностика 30 мин бесплатно",
-  btns:["Записаться на диагностику","Услуги и форматы","Как мы работаем: 3 шага","Telegram-канал","Написать на почту"],icons:["TG","in","@"],
-  pal:{bg:"#0F1B2D",fg:"#E8ECF2",ac:"#D4A44A",bt:"#18263B",leaf:"#5B6B82"},font:"'Manrope',system-ui,sans-serif"},
- {niche:"Онлайн-курс",name:"Excel за 14 дней",init:"X",
-  task:"Собрать заявки на поток: дата старта, программа, бесплатный урок.",
-  sub:"От таблиц на глаз до сводных и формул. Уроки по 20 минут.",chip:"Старт потока: 10 декабря",
-  btns:["Бесплатный первый урок","Программа курса","Тарифы","Вопросы и ответы","Записаться в WhatsApp"],icons:["YT","TG","WA"],
-  pal:{bg:"#F1F5EF",fg:"#1D2A22",ac:"#1F8A4C",bt:"#FFFFFF",leaf:"#B9D3C1"},font:"'Unbounded',system-ui,sans-serif",nameSize:15},
- {niche:"Личная страница · фотограф",name:"Айдана, фотограф",init:"А",
-  task:"Показать стиль, цены и свободные даты, чтобы клиент сразу бронировал.",
-  sub:"Семейные и love-story съёмки в Бишкеке и на Иссык-Куле",chip:"Пакеты от 8 000 сом",
-  btns:["Портфолио","Пакеты и цены","Свободные даты","Как подготовиться к съёмке","Написать в WhatsApp"],icons:["IG","WA","TG"],
-  pal:{bg:"#F4F3F0",fg:"#141414",ac:"#141414",bt:"#FFFFFF",leaf:"#A8A39A"},font:"'Montserrat',system-ui,sans-serif"},
- {niche:"Кофейня",name:"Зерно 12",init:"З12",
-  task:"Меню, заказ с собой и бронь стола в одном месте, плюс программа лояльности.",
-  sub:"Спешелти-кофе и выпечка каждое утро. Центр, ул. Токтогула",chip:"Каждый 7-й кофе в подарок",
-  btns:["Меню","Заказать с собой","Забронировать стол","Как добраться","Работа у нас"],icons:["IG","WA","2Г"],
-  pal:{bg:"#2A1C13",fg:"#F3E6D2",ac:"#E3A23B",bt:"#3A281C",leaf:"#8B6A4F"},font:"'Unbounded',system-ui,sans-serif",nameSize:18},
- {niche:"Личная страница · тренер",name:"Тимур, тренер",init:"Т",
-  task:"Перевести подписчика в пробную тренировку или онлайн-ведение.",
-  sub:"Персональные тренировки и онлайн-ведение. Сила, осанка, без травм.",chip:"Пробная тренировка бесплатно",
-  btns:["Записаться на пробную","Онлайн-ведение","Тренировки в зале","Рассчитать КБЖУ","Telegram"],icons:["IG","TG","WA"],
-  pal:{bg:"#0E0F13",fg:"#F4F5F8",ac:"#3D6BFF",bt:"#1A1C24",leaf:"#2A2E3A"},font:"'Manrope',system-ui,sans-serif"}
+{sphere:"Магазины и еда",styles:["Мягкий"],niche:"Цветочная мастерская",name:"Пионовый сад",init:"ПС",
+task:"Принять заказ букета за пару касаний: каталог, WhatsApp, условия доставки.",
+sub:"Букеты и композиции с доставкой по Бишкеку за 2 часа",chip:"Ежедневно 9:00–21:00",
+btns:["Каталог букетов","Заказать в WhatsApp","Доставка и оплата","Свадебная флористика","Мы на 2ГИС"],icons:["IG","WA","TG"],
+pal:{bg:"#F6ECEE",fg:"#2E2A2B",ac:"#C46A78",bt:"#FFFFFF",leaf:"#7C8F6A"},font:"'Cormorant Garamond',Georgia,serif",nameSize:22},
+{sphere:"Услуги",styles:["Тёмный","Минимализм"],niche:"Консалтинг для малого бизнеса",name:"Ось · консалтинг",init:"О",
+task:"Вызвать доверие и довести до записи на бесплатную диагностику.",
+sub:"Настраиваем продажи и учёт в малом бизнесе. Без воды, с цифрами.",chip:"Диагностика 30 мин бесплатно",
+btns:["Записаться на диагностику","Услуги и форматы","Как мы работаем: 3 шага","Telegram-канал","Написать на почту"],icons:["TG","in","@"],
+pal:{bg:"#0F1B2D",fg:"#E8ECF2",ac:"#D4A44A",bt:"#18263B",leaf:"#5B6B82"},font:"'Manrope',system-ui,sans-serif"},
+{sphere:"Эксперты и обучение",styles:["Яркий"],niche:"Онлайн-курс",name:"Excel за 14 дней",init:"X",
+task:"Собрать заявки на поток: дата старта, программа, бесплатный урок.",
+sub:"От таблиц на глаз до сводных и формул. Уроки по 20 минут.",chip:"Старт потока: 10 декабря",
+btns:["Бесплатный первый урок","Программа курса","Тарифы","Вопросы и ответы","Записаться в WhatsApp"],icons:["YT","TG","WA"],
+pal:{bg:"#F1F5EF",fg:"#1D2A22",ac:"#1F8A4C",bt:"#FFFFFF",leaf:"#B9D3C1"},font:"'Unbounded',system-ui,sans-serif",nameSize:15},
+{sphere:"Личные страницы",styles:["Минимализм"],niche:"Фотограф",name:"Айдана, фотограф",init:"А",
+task:"Показать стиль, цены и свободные даты, чтобы клиент сразу бронировал.",
+sub:"Семейные и love-story съёмки в Бишкеке и на Иссык-Куле",chip:"Пакеты от 8 000 сом",
+btns:["Портфолио","Пакеты и цены","Свободные даты","Как подготовиться к съёмке","Написать в WhatsApp"],icons:["IG","WA","TG"],
+pal:{bg:"#F4F3F0",fg:"#141414",ac:"#141414",bt:"#FFFFFF",leaf:"#A8A39A"},font:"'Montserrat',system-ui,sans-serif"},
+{sphere:"Магазины и еда",styles:["Тёмный"],niche:"Кофейня",name:"Зерно 12",init:"З12",
+task:"Меню, заказ с собой и бронь стола в одном месте, плюс программа лояльности.",
+sub:"Спешелти-кофе и выпечка каждое утро. Центр, ул. Токтогула",chip:"Каждый 7-й кофе в подарок",
+btns:["Меню","Заказать с собой","Забронировать стол","Как добраться","Работа у нас"],icons:["IG","WA","2Г"],
+pal:{bg:"#2A1C13",fg:"#F3E6D2",ac:"#E3A23B",bt:"#3A281C",leaf:"#8B6A4F"},font:"'Unbounded',system-ui,sans-serif",nameSize:18},
+{sphere:"Личные страницы",styles:["Тёмный","Яркий"],niche:"Персональный тренер",name:"Тимур, тренер",init:"Т",
+task:"Перевести подписчика в пробную тренировку или онлайн-ведение.",
+sub:"Персональные тренировки и онлайн-ведение. Сила, осанка, без травм.",chip:"Пробная тренировка бесплатно",
+btns:["Записаться на пробную","Онлайн-ведение","Тренировки в зале","Рассчитать КБЖУ","Telegram"],icons:["IG","TG","WA"],
+pal:{bg:"#0E0F13",fg:"#F4F5F8",ac:"#3D6BFF",bt:"#1A1C24",leaf:"#2A2E3A"},font:"'Manrope',system-ui,sans-serif"},
+{sphere:"Услуги",styles:["Мягкий"],niche:"Брови и ресницы",name:"Lumi · brow bar",init:"L",
+task:"Онлайн-запись и прайс, чтобы не отвечать в директ на одни и те же вопросы.",
+sub:"Архитектура бровей, ламинирование, ресницы. Мкр. Асанбай",chip:"Свободные окна на этой неделе",
+btns:["Записаться онлайн","Прайс","Работы до и после","Как добраться","Подарочный сертификат"],icons:["IG","WA","TG"],
+pal:{bg:"#F3EEFA",fg:"#2A2340",ac:"#7A5AF8",bt:"#FFFFFF",leaf:"#C9BCEB"},font:"'Manrope',system-ui,sans-serif"},
+{sphere:"Услуги",styles:["Тёмный","Яркий"],niche:"Детейлинг и автосервис",name:"Блеск · детейлинг",init:"Б",
+task:"Показать услуги с ценами и записать машину на удобное время.",
+sub:"Полировка, керамика, химчистка салона. Свой бокс, гарантия на работы.",chip:"Химчистка салона от 4 500 сом",
+btns:["Записать авто","Услуги и цены","Фото работ","Гарантия и уход","Мы на 2ГИС"],icons:["IG","WA","2Г"],
+pal:{bg:"#0D0D0D",fg:"#F2F2F2",ac:"#FF7A1A",bt:"#1A1A1A",leaf:"#3A3A3A"},font:"'Unbounded',system-ui,sans-serif",nameSize:15},
+{sphere:"Эксперты и обучение",styles:["Минимализм"],niche:"Репетитор",name:"Математика · ОРТ",init:"М",
+task:"Объяснить родителю формат занятий и записать ребёнка на пробный урок.",
+sub:"Онлайн и офлайн, 5–11 класс. Подготовка к ОРТ и контрольным.",chip:"Пробный урок 30 мин бесплатно",
+btns:["Пробный урок","Форматы и цены","Подготовка к ОРТ","Как проходят занятия","Написать в WhatsApp"],icons:["WA","TG","YT"],
+pal:{bg:"#FFFFFF",fg:"#1B1F3B",ac:"#2F5BEA",bt:"#F4F6FB",leaf:"#C9D1E6"},font:"'Manrope',system-ui,sans-serif"},
+{sphere:"Магазины и еда",styles:["Яркий"],niche:"Доставка еды",name:"Плов Хаус",init:"ПХ",
+task:"Принять заказ быстрее, чем клиент передумает: меню, зоны доставки, обеды.",
+sub:"Плов, самса и лагман с доставкой по городу за 60 минут",chip:"Доставка бесплатно от 1 500 сом",
+btns:["Заказать в WhatsApp","Меню с ценами","Комплексные обеды","Плов на казан для праздника","Зоны доставки"],icons:["IG","WA","2Г"],
+pal:{bg:"#FFF3DC",fg:"#3B1F0E",ac:"#D9480F",bt:"#FFFFFF",leaf:"#F2C98A"},font:"'Unbounded',system-ui,sans-serif",nameSize:18},
+{sphere:"Эксперты и обучение",styles:["Мягкий","Минимализм"],niche:"Психолог",name:"Жылдыз, психолог",init:"Ж",
+task:"Снять тревогу перед первым обращением: подход, формат, цена, запись.",
+sub:"Тревога, выгорание, отношения. Онлайн-консультации из любой страны.",chip:"Первая встреча 50 минут",
+btns:["Записаться на консультацию","С чем я работаю","Формат и стоимость","Образование и подход","Telegram-канал"],icons:["TG","IG","WA"],
+pal:{bg:"#EEF2EE",fg:"#26302A",ac:"#5E7F6B",bt:"#FFFFFF",leaf:"#C5D1C8"},font:"'Cormorant Garamond',Georgia,serif",nameSize:22},
+{sphere:"Личные страницы",styles:["Тёмный","Минимализм"],niche:"Риэлтор",name:"Эрлан, риэлтор",init:"Э",
+task:"Собрать заявки на покупку и продажу, показать объекты и опыт.",
+sub:"Новостройки и вторичка в Бишкеке. Сопровождение сделки под ключ.",chip:"Подбор квартиры бесплатно",
+btns:["Подобрать квартиру","Продать квартиру","Актуальные объекты","Как проходит сделка","Написать в WhatsApp"],icons:["WA","IG","TG"],
+pal:{bg:"#111418",fg:"#EDEFF2",ac:"#C9B38A",bt:"#1B2027",leaf:"#3A414C"},font:"'Montserrat',system-ui,sans-serif"}
 ];
 const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const light=hex=>{const n=parseInt(hex.slice(1),16);return((n>>16)*299+((n>>8)&255)*587+(n&255)*114)/1000>150};
-document.getElementById("list").innerHTML=cases.map((c,i)=>{
-  const p=c.pal, onAc=light(p.ac)?"#111":"#fff";
-  const btns=c.btns.map((b,j)=>j===0
-    ?`<div class="btn" style="background:${p.ac};color:${onAc}">${esc(b)}</div>`
-    :`<div class="btn" style="background:${p.bt};color:${p.fg};border:1px solid ${p.leaf}55">${esc(b)}</div>`).join("");
-  const icons=c.icons.map(t=>`<span style="background:${p.bt};color:${p.ac};border:1px solid ${p.leaf}55">${t}</span>`).join("");
-  const sw=[["Фон",p.bg],["Текст",p.fg],["Акцент",p.ac],["Кнопки",p.bt],["Доп.",p.leaf]]
-    .map(([n,v])=>`<span><i style="background:${v}"></i>${n} ${v}</span>`).join("");
-  const blocks=["Аватар и название","Подзаголовок: "+c.sub,"Плашка: "+c.chip,...c.btns.map((b,j)=>"Кнопка"+(j===0?" (главная)":"")+": "+b),"Иконки соцсетей"]
-    .map(b=>`<li>${esc(b)}</li>`).join("");
-  return `<article class="case">
-    <div class="phone" aria-label="Мокап страницы ${esc(c.name)}"><div class="screen" style="background:${p.bg};color:${p.fg};font-family:${c.font}">
-      <div class="av" style="background:${p.ac};color:${onAc}">${c.init}</div>
-      <div class="nm" style="font-size:${c.nameSize||17}px">${esc(c.name)}</div>
-      <div class="sub">${esc(c.sub)}</div>
-      <div class="chip" style="background:${p.ac}22;color:${p.ac === p.fg ? p.fg : p.ac}">${esc(c.chip)}</div>
-      ${btns}
-      <div class="icons">${icons}</div>
-    </div></div>
-    <div class="info">
-      <div class="tag"><b>Концепт ${i+1}</b> · ${esc(c.niche)}</div>
-      <h2>${esc(c.name)}</h2>
-      <p>${esc(c.task)}</p>
-      <h3>Структура страницы</h3>
-      <ol class="blocks">${blocks}</ol>
-      <h3>Палитра</h3>
-      <div class="sw">${sw}</div>
-    </div>
-  </article>`}).join("");
+const card=(c,i)=>{
+const p=c.pal,onAc=light(p.ac)?"#111":"#fff";
+const btns=c.btns.map((b,j)=>j===0
+?`<div class="btn" style="background:${p.ac};color:${onAc}">${esc(b)}</div>`
+:`<div class="btn" style="background:${p.bt};color:${p.fg};border:1px solid ${p.leaf}55">${esc(b)}</div>`).join("");
+const icons=c.icons.map(t=>`<span style="background:${p.bt};color:${p.ac};border:1px solid ${p.leaf}55">${t}</span>`).join("");
+const sw=[["Фон",p.bg],["Текст",p.fg],["Акцент",p.ac],["Кнопки",p.bt],["Доп.",p.leaf]].map(([n,v])=>`<span><i style="background:${v}"></i>${n} ${v}</span>`).join("");
+const blocks=["Аватар и название","Подзаголовок: "+c.sub,"Плашка: "+c.chip,...c.btns.map((b,j)=>"Кнопка"+(j===0?" (главная)":"")+": "+b),"Иконки соцсетей"].map(b=>`<li>${esc(b)}</li>`).join("");
+const pills=[c.sphere,...c.styles].map(t=>`<span>${esc(t)}</span>`).join("");
+return `<article class="case">
+<div class="phone" aria-label="Мокап страницы ${esc(c.name)}"><div class="screen" style="background:${p.bg};color:${p.fg};font-family:${c.font}">
+<div class="av" style="background:${p.ac};color:${onAc}">${c.init}</div>
+<div class="nm" style="font-size:${c.nameSize||17}px">${esc(c.name)}</div>
+<div class="sub">${esc(c.sub)}</div>
+<div class="chip" style="background:${p.ac}22;color:${p.ac}">${esc(c.chip)}</div>
+${btns}
+<div class="icons">${icons}</div>
+</div></div>
+<div class="info">
+<div class="tag"><b>Концепт ${i+1}</b> · ${esc(c.niche)}</div>
+<h2>${esc(c.name)}</h2>
+<div class="pills">${pills}</div>
+<p>${esc(c.task)}</p>
+<h3>Структура страницы</h3>
+<ol class="blocks">${blocks}</ol>
+<h3>Палитра</h3>
+<div class="sw">${sw}</div>
+</div>
+</article>`};
+const state={sphere:"Все",style:"Все"};
+const mk=(id,key,opts)=>{const row=document.getElementById(id);["Все",...opts].forEach(o=>{const b=document.createElement("button");b.type="button";b.className="fbtn";b.textContent=o;b.setAttribute("aria-pressed",String(o==="Все"));b.addEventListener("click",()=>{state[key]=o;row.querySelectorAll(".fbtn").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));render()});row.appendChild(b)})};
+const word=n=>n%10===1&&n%100!==11?"концепт":(n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?"концепта":"концептов");
+function render(){
+const shown=cases.map((c,i)=>[c,i]).filter(([c])=>(state.sphere==="Все"||c.sphere===state.sphere)&&(state.style==="Все"||c.styles.includes(state.style)));
+document.getElementById("count").textContent=`Показано ${shown.length} ${word(shown.length)} из ${cases.length}`;
+document.getElementById("list").innerHTML=shown.length?shown.map(([c,i])=>card(c,i)).join(""):`<div class="empty">Нет концептов с таким сочетанием. <button type="button" id="reset">Сбросить фильтры</button></div>`;
+const r=document.getElementById("reset");if(r)r.addEventListener("click",()=>{state.sphere="Все";state.style="Все";document.querySelectorAll(".fbtn").forEach(x=>x.setAttribute("aria-pressed",String(x.textContent==="Все")));render()});
+}
+mk("f-sphere","sphere",SPHERES);mk("f-style","style",STYLES);render();
 </script>
 </body>
 </html>
