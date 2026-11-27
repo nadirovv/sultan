@@ -1,0 +1,18 @@
+<footer class="sitefoot">
+<style>
+.sitefoot{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);text-align:left}
+.sitefoot a{color:var(--muted);text-decoration:none}
+.sitefoot a:hover{color:var(--fg)}
+.sf-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px}
+.sf-grid b{display:block;color:var(--fg);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.sf-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.sf-bottom{margin-top:28px;font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media (max-width:640px){.sf-grid{grid-template-columns:1fr 1fr}.sf-grid>div:first-child{grid-column:1/-1}}
+</style>
+<div class="sf-grid">
+<div><b>SULTAN</b><p style="margin:0">NFC-визитки и страницы Taplink под ключ.<br>Бишкек, Кыргызстан.</p></div>
+<div><b>Разделы</b><ul><li><a href="./">Кейсы</a></li><li><a href="nfc.html">NFC-визитки</a></li><li><a href="nfc.html#prices">Цены</a></li><li><a href="nfc.html#order">Заказать</a></li></ul></div>
+<div><b>Связаться</b><ul><li><a href="https://wa.me/996707295898" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://instagram.com/nadirovvvn" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://taplink.cc/nadirovv" target="_blank" rel="noopener">Taplink</a></li></ul></div>
+</div>
+<div class="sf-bottom"><span>© 2026 NEXT GEN MINDSET. Все права защищены.</span></div>
+</footer>
